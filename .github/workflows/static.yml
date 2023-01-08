@@ -32,11 +32,15 @@ jobs:
         uses: actions/checkout@v3
       - name: Setup Pages
         uses: actions/configure-pages@v2
+      - name: MakeWebRoot
+        run: |
+          Tools/MakeWeb.sh
+          Tools/DownLoad.sh
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
-          path: './WebRoot'
+          path: 'WebRoot'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
