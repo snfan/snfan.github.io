@@ -34,10 +34,12 @@ jobs:
         uses: actions/configure-pages@v2
       - name: MakeWeb
         run: |
-          chmod +x Tools/MakeWeb.sh
           chmod +x Tools/DownLoad.sh
-          Tools/MakeWeb.sh
+          chmod +x Tools/Complete.sh
+          chmod +x Tools/Initialize.sh
+          Tools/Initialize.sh
           Tools/DownLoad.sh
+          Tools/Complete.sh
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
