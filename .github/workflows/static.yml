@@ -34,6 +34,8 @@ jobs:
         uses: actions/configure-pages@v2
       - name: MakeWebRoot
         run: |
+          chmod +x Tools/MakeWeb.sh
+          chmod +x Tools/DownLoad.sh
           Tools/MakeWeb.sh
           Tools/DownLoad.sh
       - name: Upload artifact
