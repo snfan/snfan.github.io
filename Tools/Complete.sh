@@ -1,3 +1,5 @@
 #!/bin/bash
 
-echo 111 > WebRoot/index.html
+cp Pages/bg.jpg WebRoot/bg.jpg
+cp Pages/style.css WebRoot/style.css
+cp Pages/index.html WebRoot/index.html
